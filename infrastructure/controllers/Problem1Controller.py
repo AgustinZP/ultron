@@ -5,7 +5,16 @@ from infrastructure.repositories.JarvisApiRepository import JarvisApiRepository
 router = APIRouter()
 
 # Define a GET endpoint to sove problem 1
-@router.get("/problem1")
+@router.get(
+    "/problem1",
+    summary="Solve Problem 1: Find Gems",
+    description="""
+This endpoint solves the first problem by retrieving 
+a matrix of characters and detecting which gems are hidden within.
+""", 
+    tags=["Problems"],
+    response_description="Matrix, found gems and validation response from JARVIS."
+)
 def solve_problem_1():
     repository = JarvisApiRepository()
     action = Problem1Action(repository)
