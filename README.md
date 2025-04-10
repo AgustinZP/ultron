@@ -10,6 +10,7 @@ It solves a 3-part technical challenge.
 - **Requests**
 - **dotenv**
 - **pipenv**
+- **pytest**
 
 ## ⚙️ Setup Instructions
 
@@ -19,7 +20,7 @@ It solves a 3-part technical challenge.
 
 to install with `pipenv install`
 
-### 3. Create a .env file with your credentials
+### 3. Create a **_.env_** file with your credentials
 
 `BASE_URL=https://jarvis.dev/api`
 
@@ -36,3 +37,7 @@ To test an endpoint, visit:
 - `http://127.0.0.1:8000/problem3`
 
 Docs available at `http://localhost:8000/docs`
+
+## 🧪 Tests
+
+to run tests `pipenv run pytest`
