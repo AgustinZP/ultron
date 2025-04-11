@@ -20,7 +20,7 @@ It solves a 3-part technical challenge.
 
 to install with `pipenv install`
 
-### 3. Create a **_.env_** file with your credentials
+### 3. In file .env.example should change url and candidate_key for the right ones
 
 `BASE_URL=https://jarvis.dev/api`
 
@@ -35,6 +35,8 @@ To test an endpoint, visit:
 - `http://127.0.0.1:8000/problem1`
 - `http://127.0.0.1:8000/problem2`
 - `http://127.0.0.1:8000/problem3`
+
+or run `pipenv run python command.py` to solve problems in console
 
 Docs available at `http://localhost:8000/docs`
 

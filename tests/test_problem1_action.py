@@ -6,11 +6,11 @@ class MockRepository:
             "matrix": [
                 list("SPACEMIND"),
                 list("REALITYXX"),
-                list("XXXXXXXXX"),
-                list("XXXXXXXXX"),
-                list("XXXXXXXXX"),
-                list("XXXXXXXXX"),
-                list("XXXXXXXXX"),
+                list("PXXXXXXXX"),
+                list("OXXXXXXXX"),
+                list("WXXXXXXXX"),
+                list("EXXXXXXXX"),
+                list("RXXXXXXXX"),
             ]
         }
 
@@ -22,5 +22,9 @@ def test_problem1_action():
     result = action.execute()
 
     assert "solution" in result
-    assert set(result["solution"]).issubset(["SPACE", "MIND", "REALITY", "TIME", "POWER", "SOUL"])
+
+    expected = ["SPACE", "MIND", "REALITY", "POWER"]
+    for gem in expected:
+        assert gem in result["solution"]
+        
     assert result["response"]["response"] == "Success"

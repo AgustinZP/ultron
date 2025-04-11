@@ -1,8 +1,8 @@
 import requests
-from domain.repositories.JarvisRepository import JarvisRepository
+from domain.repositories.JarvisClient import JarvisClient
 from infrastructure.config.settings import CANDIDATE_KEY, BASE_URL
 
-class JarvisApiRepository(JarvisRepository):
+class JarvisApiClient(JarvisClient):
     # HTTP headers with the candidate key used for atuhentication
     headers = {
         "candidate-key": CANDIDATE_KEY

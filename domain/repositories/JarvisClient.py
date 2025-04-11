@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 # Abstract class that defines the interface for accessing JARVIS API
-class JarvisRepository(ABC):
+class JarvisClient(ABC):
 
     @abstractmethod
     def get_problem(self, problemId: int) -> dict:

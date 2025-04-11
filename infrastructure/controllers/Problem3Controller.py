@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from actions.Problem3Action import Problem3Action
-from infrastructure.repositories.JarvisApiRepository import JarvisApiRepository
+from infrastructure.repositories.JarvisApiClient import JarvisApiClient
 
 
 router = APIRouter()
@@ -20,6 +20,6 @@ The goal is to reach Ironman with at least 30 units of fuel remaining.
     response_description="Route taken, final fuel and validation response from JARVIS."
 )
 def solve_problem_3():
-    repository = JarvisApiRepository()
+    repository = JarvisApiClient()
     action = Problem3Action(repository)
     return action.execute()

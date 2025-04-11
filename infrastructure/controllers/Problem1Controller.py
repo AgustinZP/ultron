@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from actions.Problem1Action import Problem1Action
-from infrastructure.repositories.JarvisApiRepository import JarvisApiRepository
+from infrastructure.repositories.JarvisApiClient import JarvisApiClient
 
 router = APIRouter()
 
@@ -16,6 +16,6 @@ a matrix of characters and detecting which gems are hidden within.
     response_description="Matrix, found gems and validation response from JARVIS."
 )
 def solve_problem_1():
-    repository = JarvisApiRepository()
+    repository = JarvisApiClient()
     action = Problem1Action(repository)
     return action.execute()

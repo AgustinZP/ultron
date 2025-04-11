@@ -1,8 +1,8 @@
-from domain.repositories.JarvisRepository import JarvisRepository
+from domain.repositories.JarvisClient import JarvisClient
 from domain.services.SqlGeneratorService import SqlGeneratorService
 
 class Problem2Action:
-    def __init__(self, repository: JarvisRepository):
+    def __init__(self, repository: JarvisClient):
         # Inject the repository
         self.repository = repository
 

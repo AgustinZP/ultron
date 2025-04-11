@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from actions.Problem2Action import Problem2Action
-from infrastructure.repositories.JarvisApiRepository import JarvisApiRepository
+from infrastructure.repositories.JarvisApiClient import JarvisApiClient
 
 
 router = APIRouter()
@@ -17,6 +17,6 @@ list of three sql queries.
     response_description="Validation response from JARVIS showing a message."
 )
 def solve_problem_2():
-    repository = JarvisApiRepository()
+    repository = JarvisApiClient()
     action = Problem2Action(repository)
     return action.execute()
